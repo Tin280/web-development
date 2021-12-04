@@ -13,7 +13,13 @@
     <h2>Check number</h2>
     <button type="button" onclick="loopTask1()">Try Loop 1</button><br><br>
     <h2>Check word</h2>
-    <button type="button" onclick="loopTask2()">Try Loop 2</button>
+    <button type="button" onclick="loopTask2()">Try Loop 2</button><br><br>
+    <h2>Make a program that prints N!</h2>
+    <button type="button" onclick="loopTask3()">Try Loop 3</button>
+    <h2>Make a program that adds the first N digits together</h2>
+    <button type="button" onclick="loopTask4()">Try Loop 4</button>
+    <h2>Make a program that calculates the sum of the first odd and even numbers of N.</h2>
+    <button type="button" onclick="loopTask5()">Try Loop 5</button>
     <script>
         function loopTask1(){
             //Read value from UI
@@ -48,6 +54,60 @@
                 //Print result to user
                 alert(output);
             }
-        </script>
+    </script>
+    <script>
+        function loopTask3(){
+                let userInput= parseInt(prompt("Type number"));
+                let factorial =1;
+                let myString ="Unspecified";
+                if(userInput>=1  ){
+                    for(let i=1;i<userInput;i++){
+                        factorial += factorial *i;
+
+            }
+            alert(factorial);
+        }
+                else
+                    alert(myString) ;
+            
+        }
+    </script>
+    <script>
+        function loopTask4(){
+            let userInput= parseInt(prompt("Type number"));
+            let factorial =0;
+            let myString ="Unspecified";
+            if(userInput>=1  ){
+                for(let i=1;i<=userInput;i++){
+                    factorial += +i;
+
+            }
+            alert(factorial );
+        }
+            else
+                alert(myString) ; 
+        }
+    </script>
+    <script>
+        function loopTask5(){
+            let userInput= parseInt(prompt("Type number"));
+            let factorial =0;
+            let myString ="Unspecified";
+            let even_sum =0,odd_sum=0;
+            if(userInput>=1  ){
+                for (i = 1; i <= userInput; i++)
+            {
+                if (i % 2 == 0)
+                    even_sum = even_sum + i;
+                else
+                    odd_sum = odd_sum + i;
+    }
+            alert("Sum of Odd = " + odd_sum);
+            alert("Sum of Even = "+ even_sum);
+        }
+            else
+                alert(myString) ; 
+        }
+    </script>
 </body>
 </html>
