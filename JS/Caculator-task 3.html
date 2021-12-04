@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/Caculator-task 2.js"></script>
+    <title>Caculator-task 3</title>
+</head>
+<body>
+    <p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<script>
+   function incrementValue()
+        {
+            var demo_id = document.getElementById('demo')
+            var value = parseInt(demo_id.value, 10);
+            // if NaN, set to 0, else, keep the current value
+            value = isNaN(value) ? 0 : value;
+            value++;
+            demo_id.value = value;
+
+            if ((value%2)==0){
+                demo_id.innerHTML = value;
+                demo_id.style.fontSize = "25px"; 
+                demo_id.style.color = "red";
+                demo_id.style.backgroundColor = "yellow";   
+            } 
+            else {
+                demo_id.innerHTML = value.toString() ;
+                demo_id.style.fontSize = "15px"; 
+                demo_id.style.color = "black";
+                demo_id.style.backgroundColor = "white";
+            }
+        }
+</script>
+
+<form>
+    <input type="button" onclick="incrementValue()" value="Increment Value" />
+</form>
+</body>
+</html>

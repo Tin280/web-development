@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check number</title>
+</head>
+<head>
+    <h1>Check number</h1>
+</head>
+<body>
+    <h2>Check number</h2>
+    <button type="button" onclick="loopTask1()">Try Loop 1</button><br><br>
+    <h2>Check word</h2>
+    <button type="button" onclick="loopTask2()">Try Loop 2</button>
+    <script>
+        function loopTask1(){
+            //Read value from UI
+            let userInput =parseInt(prompt("Type number"));
+            let myString ="Hello World";
+
+            
+            //Your program logic
+            for(let i=0;i<userInput;i++){
+                //console.log(i);
+                myString += +i ;
+                if(i <userInput-1)
+                    myString += ",";
+            }
+
+
+            //Print result to user
+            alert(myString);
+        }
+    </script>
+        <script>
+            function loopTask2(){
+                //Read value from UI
+                let userInput =prompt("Type word");
+                let counter = userInput.length;
+                let output="";
+                
+                //Your program logic
+                for(let i=0;i<counter;i++){
+                    output += +i + "." +userInput +"\n";
+                }
+                //Print result to user
+                alert(output);
+            }
+        </script>
+</body>
+</html>
