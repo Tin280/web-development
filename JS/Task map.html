@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Map</title>
+
+    <script>
+        function Check() {
+            Streetname = document.getElementById("Streetname").value
+            Streetname = Streetname.replace(/\s/g, '')
+            Town = document.getElementById("Town").value 
+            document.getElementById("mapFrame").src = "https://www.google.com/maps?q="+ Streetname + Town +"&output=embed"       
+        }
+    </script>
+</head>
+<body>
+    <iframe id="mapFrame"
+          src="https://www.google.com/maps?q=Yliopistonkatu26Lappeenranta&output=embed"
+          width= 50%; height="300px"; frameborder="0">
+    </iframe>
+
+    <p>Type An Address:</p>
+    <td>Street Name:</td>
+    <input type='text' id="Streetname" placeholder="Type The Street ">
+    <td>Town:</td>
+    <input type='text' id="Town" placeholder="Type The Town ">     
+    <button id="result" onclick="Check()">Check</button> 
+  
+    
+</body>
+</html>
