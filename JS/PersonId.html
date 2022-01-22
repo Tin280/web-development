@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/1.js"></script>
+    <title>Person Id Check</title>
+</head>
+<body>
+    <input type="text" id="personId" placeholder="ddmmyy-xxxn">
+    <button type="button" onclick="checkPersonID()">CheckID</button>
+    <div id ="Result">Result:</div>
+    <script>
+        function checkPersonIDX(){
+            //131052-308T
+            let dob = document.getElementById("personId").value;
+            let age = calculateAge(dob)
+            printValue(age);
+        }
+        function printValue(age){
+            alert(age);
+        }
+        function calculateAge(dob){
+            let date1 = new Date(dob);
+            let date2 = new Date();
+        
+            let differenceInTime = date2.getTime() - date1.getTime();
+            
+            let differenceInDays = differenceInTime /(1000*3600*24);
+            
+            let ageYears = differenceInDays/365.25;
+            let ageMonths = (ageYears-parseInt(ageYears))*12;
+            let tmp = parseInt(ageMonths);
+            let ageDays= (ageMonths-parseInt(ageMonths))*30;
+            return;
+            
+            let reValue = ("Age in Days:" + differenceInDays +"\nY:" + parseInt(ageYears) +"\nM:" +parseInt(ageMonths));
+            return reValue;
+        }
+    </script>
+</body>
+</html>
