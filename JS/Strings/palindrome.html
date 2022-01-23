@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        //  declaration of a variable and length counter of the word and a boolean value set for the palindrome 
+
+        var word, len, i, pal = true;
+
+        //accept a value from the user 
+
+        word = prompt(" Please enter a word ")
+
+        //converting the word entered by the user to a lowercase for 
+
+        a = word = word.toLowerCase();
+        // the number of characters the user inputs will be stored in the len variable 
+
+        len = word.length;
+
+        for (i = 0; i < len / 2; i++) {
+
+            // charAt is the string function that locates the individual string at that place
+            //using the the charAt function this condition will check the first and the last character of the given string 
+
+            if (a.charAt(i) != a.charAt(len - 1 - i)) {
+                pal = false;
+                break;
+
+            }
+        }
+
+        if (pal == true)
+            alert(a +" is palindrome.");
+        else
+            alert(a +" is NOT palindrome.");
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Conta

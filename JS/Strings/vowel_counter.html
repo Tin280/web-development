@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel counter</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var word ,len, i, count=0, a;
+
+        word=prompt("Enter a word ")
+        for(i=0;i<=word.length;i++)
+        {
+            a=word.charAt(i);
+
+            if(a=="a"|| a=="A"|| a=="e"|| a=="E"|| a=="i"|| a=="I"|| a=="o"||a=="O"||a=="u"||a=="U")
+            {
+                count++;
+
+            }
+        }
+
+        document.write("word is "+ word+"<br>");
+        document.write("The numbers of vowels in the word are " +count);
+
+    </script>
+</body>
+</html>
